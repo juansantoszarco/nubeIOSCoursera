@@ -12,7 +12,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
     
-    @IBOutlet weak var resultTextField: UITextView!
+    @IBOutlet weak var resultContainer: UIView!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var tituloTextField: UILabel!
+    
+    @IBOutlet weak var autorTextField: UILabel!
+    
+    @IBOutlet weak var isbnTextField: UILabel!
+    
+    @IBOutlet weak var paginasTextField: UILabel!
+    
+    @IBOutlet weak var editorialTextField: UILabel!
+    
+    @IBOutlet weak var publicacionTextField: UILabel!
     
     @IBAction func selectButton(sender: UIButton) {
         let request = NSString (format: "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:%@", inputTextField.text!)
@@ -22,7 +36,7 @@ class ViewController: UIViewController {
         let bloque = { (datos : NSData?, response : NSURLResponse?, error : NSError?) -> Void in
             let texto = NSString (data : datos!, encoding : NSUTF8StringEncoding)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.resultTextField.text = texto! as String
+                self.showResults()
             })
             
             print(texto!)
@@ -36,6 +50,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setHidden()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +58,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setHidden() ->Void {
+        resultContainer.hidden = true;
+        imageView.hidden = true;
+        tituloTextField.hidden = true;
+        autorTextField.hidden = true;
+        isbnTextField.hidden = true;
+        paginasTextField.hidden = true;
+        editorialTextField.hidden = true;
+        publicacionTextField.hidden = true;
+    }
+    
+    func showResults() -> Void {
+        resultContainer.hidden = false;
+        imageView.hidden = false;
+        tituloTextField.hidden = false;
+        autorTextField.hidden = false;
+        isbnTextField.hidden = false;
+        paginasTextField.hidden = false;
+        editorialTextField.hidden = false;
+        publicacionTextField.hidden = false;
+    }
     
 }
 

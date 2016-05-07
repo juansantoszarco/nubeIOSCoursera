@@ -13,6 +13,7 @@
 		0D5072041CDD1A1200B08E09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5072031CDD1A1200B08E09 /* Images.xcassets */; };
 		0D5072071CDD1A1200B08E09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5072051CDD1A1200B08E09 /* LaunchScreen.xib */; };
 		0D5072131CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5072121CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1Tests.swift */; };
+		0D50721D1CDE0CBF00B08E09 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D50721C1CDE0CBF00B08E09 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		0D50720C1CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSZIOSNubeCourseraSemana1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5072111CDD1A1200B08E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5072121CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSZIOSNubeCourseraSemana1Tests.swift; sourceTree = "<group>"; };
+		0D50721C1CDE0CBF00B08E09 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		0D5071EE1CDD1A1200B08E09 = {
 			isa = PBXGroup;
 			children = (
+				0D50721C1CDE0CBF00B08E09 /* Reachability.swift */,
 				0D5071F91CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1 */,
 				0D50720F1CDD1A1200B08E09 /* JSZIOSNubeCourseraSemana1Tests */,
 				0D5071F81CDD1A1200B08E09 /* Products */,
@@ -214,6 +217,7 @@
 			files = (
 				0D5071FF1CDD1A1200B08E09 /* ViewController.swift in Sources */,
 				0D5071FD1CDD1A1200B08E09 /* AppDelegate.swift in Sources */,
+				0D50721D1CDE0CBF00B08E09 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

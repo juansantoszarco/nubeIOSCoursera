@@ -115,6 +115,7 @@ class ViewController: UIViewController {
                 if let objects = json["ISBN:978-84-376-0494-7"] as? NSDictionary{
                     if let titulo: AnyObject = objects["title"] {
                         tituloTextField.text = "Título: \(titulo)"
+                        tituloTextField.sizeToFit()
                     }
                     
                     isbnTextField.text = NSString (format: "ISBN: %@", inputTextField.text)
